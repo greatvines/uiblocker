@@ -1,0 +1,29 @@
+{
+  "name": "uiblocker",
+  "version": "1.0.0",
+  "description": "Block UI while running (async) functions using $.BlockUI",
+  "main": "uiblocker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian G. Warden",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^4.2.3",
+    "browserify-shim": "^3.6.0"
+  },
+  "dependencies": {
+    "underscore": "^1.6.0"
+  },
+  "browser": {
+    "blockui": "./lib/jquery.blockUI.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  }
+}
